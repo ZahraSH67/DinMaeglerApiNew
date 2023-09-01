@@ -26,3 +26,24 @@
   /* font-weight: bold; */
 }
 
+
+
+/* SelectBuilding */
+.selectedBuildings{
+
+  display: grid;
+  grid-template-columns:repeat(2, 1fr) ;
+  grid-template-rows:repeat(2 , 1fr) ;
+  position: relative;
+}
+.buildingCard{
+  width: 540px;
+  height: 446px;
+  /* border: 10px solid red; */
+  /* display: flex; */
+}
+.buildingCard img{
+  width: 540px;
+  height: 225px;
+}
+

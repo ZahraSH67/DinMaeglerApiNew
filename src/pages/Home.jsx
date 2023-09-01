@@ -6,7 +6,9 @@ import ErrorBoundary from "../components/ErrorBoundary";
 import SelectBuildings from "../templates/SelectBuildings";
 import RegisterEmail from "../components/RegisterEmail";
 import Agent from "../templates/Agent";
-
+import AppStore from "../components/AppStore";
+import Footer from "../templates/Footer";
+import UnderFooter from "../components/UnderFooter";
 const Home = () => {
   return (
     <>
@@ -18,6 +20,9 @@ const Home = () => {
         <SelectBuildings />
         <RegisterEmail />
         <Agent />
+        <AppStore />
+        <Footer />
+        <UnderFooter />
       </ErrorBoundary>
     </>
   );

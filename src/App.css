@@ -1,7 +1,28 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.icon{
+  text-decoration: none;
+  color: white;
+}
+
+/* section{
+  background-position: 
+} */
+.searchTitle{
+  color: white;
+  font-size: 50px;
+}
+
+#input_Box{
+  width: 728px;
+  height: 48px;
+}
+#search_Button{
+  width:120px;
+  height: 48px;
+  background-color: black;
+  color: white;
+}
+#search-head{
+  font-size: 20px;
+  /* font-weight: bold; */
 }
 

@@ -47,3 +47,93 @@
   height: 225px;
 }
 
+
+/* RegisterBox */
+.email-box{
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  /* color: white; */
+}
+#email{
+  width: 540px;
+  height: 74px;
+  z-index: 1;
+
+  flex-grow: 1;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  margin-right: 10px
+}
+.emailButton{
+  background-color: white;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.background-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15,29,45, 0.9); /* Darker overlay color */
+  z-index: -1;
+}
+.email-title{
+  color: white;
+}
+
+
+/* Agent */
+.agentPart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.agentWrap{
+    display: grid;
+  grid-template-rows:repeat(2, 1fr) ;
+  grid-template-columns:repeat(3 , 1fr) ;
+  gap: 20px;
+}
+.agentCard{
+  width:350px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.agentCard img{
+  width:350px;
+  height: 300px;
+}
+.agentCard p:nth-child(2){
+  font-weight: bold;
+  font-size: 20px;
+}
+.agentCard p:nth-child(3){
+  color: #7B7B7B;
+}
+.agentPart h4{
+  font-size: 30px;
+}
+.agentPart p{
+  font-size: 15px;
+  line-height: 30%;
+}
+
+
+
+

@@ -17,6 +17,9 @@ const Navigation = () => {
             <Link to="/buildingforsale">
                 <NavigationElement title="Boliger til salg" />
             </Link>
+            <Link to="/agentview">
+                <NavigationElement title="Mæglere" />
+            </Link>
             {/* Add other navigation links here */}
         </StyledNavigation>
     )

@@ -26,16 +26,37 @@ import Home from "./pages/Home.jsx";
 import ErrorView from "./pages/ErrorView.jsx";
 // import DetailView from "./pages/DetailView.jsx";
 import BuildingForSale from "./pages/BuildingsForSale.jsx";
+import AgentView from "./pages/AgentView.jsx";
+// import BuildingDetailsView, { BuildingDetailsViewLoader } from "./pages/BuildingDetailsView.jsx";
+
+
+
 // import Lottie from "lottie-react";
 
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route path="/" element={<App />} errorElement={<ErrorView />}>
+//       <Route index element={<Home />} />
+//       <Route path="/buildingforsale/" element={<BuildingForSale />} >
+//       {/* <Route index element={<Houses />} loader={housesLoader} /> */}
+//         <Route path="/buildingdetailsview/:id" element={<BuildingDetailsView />} />
+//       </Route>
+//     </Route>
+//   )
+// );
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorView />}>
       <Route index element={<Home />} />
       <Route path="/buildingforsale/" element={<BuildingForSale />} />
+      <Route path="/agentview/" element={<AgentView />} />
+      
+      {/* <Route path="/buildingdetailsview:id" element={< BuildingDetailsView/>} loader={BuildingDetailsViewLoader} /> */}
+  
     </Route>
   )
 );
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

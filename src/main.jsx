@@ -27,6 +27,7 @@ import ErrorView from "./pages/ErrorView.jsx";
 // import DetailView from "./pages/DetailView.jsx";
 import BuildingForSale from "./pages/BuildingsForSale.jsx";
 import AgentView from "./pages/AgentView.jsx";
+import ContactUs from "./pages/ContactUs.jsx";
 // import BuildingDetailsView, { BuildingDetailsViewLoader } from "./pages/BuildingDetailsView.jsx";
 
 
@@ -50,6 +51,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="/buildingforsale/" element={<BuildingForSale />} />
       <Route path="/agentview/" element={<AgentView />} />
+      <Route path="/contactus/" element={<ContactUs />} />
       
       {/* <Route path="/buildingdetailsview:id" element={< BuildingDetailsView/>} loader={BuildingDetailsViewLoader} /> */}
   

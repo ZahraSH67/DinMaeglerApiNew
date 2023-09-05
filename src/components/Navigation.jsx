@@ -20,6 +20,9 @@ const Navigation = () => {
             <Link to="/agentview">
                 <NavigationElement title="Mæglere" />
             </Link>
+            <Link to="/contactus">
+                <NavigationElement title="Konatct os" />
+            </Link>
             {/* Add other navigation links here */}
         </StyledNavigation>
     )

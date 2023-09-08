@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {HiMail} from "react-icons/hi";
 import {BiLogoLinkedin} from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 const AgentList = () => {
   const [agents, setAgents] = useState([]);
@@ -29,13 +30,22 @@ const AgentList = () => {
       <div className='agentWrap'>
         {agents.map((agent) => (
           <div key={agent.id} className='agentCard'>
-             <img src={agent.image.url} alt="" />
+           <Link to={`/agents/${agent.id}`} state={{ agentId: agent.id }}>{agent.name}
+           <img src={agent.image.url} alt="" />
             <h3>{agent.name}</h3>
             <p>{agent.title}</p>
                 <div className='socialMedia'>
                     <HiMail src={agent.emil}/>
                     <BiLogoLinkedin />
                 </div> 
+           
+           
+           
+           </Link>
+             
+              
+            
+          
           </div>
         ))}
       </div>

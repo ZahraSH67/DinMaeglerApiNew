@@ -25,6 +25,10 @@ const StyledBigDiv = styled.div`
   
     align-items: center;
     // gap: 60px;
+    // border: 1px solid green;
+    margin-top: -120px;
+    margin-bottom: 150px;
+    padding-left: 140px;
 `
 const StyledSection = styled.section`
     width: 350px;
@@ -34,6 +38,7 @@ const StyledSection = styled.section`
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+ 
 `
 const StyledLittleDiv = styled.div`
 // border: 1px solid red;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {AiOutlineUser} from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 const StyledIcon = styled(AiOutlineUser)`
     color: white;
@@ -13,12 +14,16 @@ const StyledButton = styled.button`
 const StyledDiv = styled.div``
 
 
-const Login = () =>{
+const LoginButton = () =>{
     return(
-        <StyledDiv>
+        <Link to="/loginview"> 
+             <StyledDiv>
             <StyledIcon />
             <StyledButton>Log ind</StyledButton>
-        </StyledDiv>
+            </StyledDiv>
+
+        </Link>
+       
     )
 }
-export default Login
+export default LoginButton

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Logo from "../assets/logo.png"
 import Address from "../components/Address";
+import { Link } from "react-router-dom";
 
 
 const StyledSection = styled.section`
@@ -13,10 +14,16 @@ const StyledBigDiv = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 `
 const StyledLeftDiv = styled.div``
 const StyledRightDiv = styled.div`
     margin-right: 380px;
+    display: flex;
+    flex-direction: column;
+   
+    
+
 `
 
 const StyledLittleDiv = styled.div`
@@ -46,16 +53,42 @@ const Footer = () =>{
                 <Address />
 
                 <StyledRightDiv>
-                    <ul>Quick Links
-                        <li />
-                        <a href="">Boliger til salg</a>
-                        <li />
-                        <a href="">Mæglere</a>
-                        <li />
-                        <a href="">Kontakt os</a>
-                        <li />
-                        <a href="">Log ind / bliv bruger</a>
-                    </ul>
+                    <h6 className="footerHeader"> Quick Links</h6>
+
+                    <Link to="/buildingsforsale" className="footerLink">
+                        {/* <a href="" className="footerLink"> */}
+                            Boliger til salg
+                            {/* </a> */}
+                    </Link>
+
+                    <Link to="/agentview" className="footerLink">
+                        {/* <a href="" className="footerLink"> */}
+                            Mæglere
+                            {/* </a> */}
+                    </Link>
+                    <Link to="/contactus" className="footerLink">
+                        {/* <a href="" className="footerLink"> */}
+                            Kontakt os
+                            {/* </a> */}
+                    </Link>
+                    
+                    <Link to="/registrationpage" className="footerLink">
+                        {/* <a href="" className="footerLink"> */}
+                             Log ind / bliv bruger
+                             {/* </a>    */}
+                    </Link>
+                    
+                    {/* <ul>Quick Links
+                        <li><a href="">Boliger til salg</a></li>
+                        <li><a href="">Mæglere</a></li>
+                        <li><a href="">Kontakt os</a></li>
+                        <li>
+                        <Link to="/registrationpage">
+                            <a href="">Log ind / bliv bruger</a>
+                            </Link>
+                            
+                        </li>
+                    </ul> */}
                 </StyledRightDiv>
             </StyledBigDiv>
             <StyledLittleDiv>

@@ -7,14 +7,15 @@ import UnderFooter from "../components/UnderFooter";
 import ErrorBoundary from "../components/ErrorBoundary";
 
 
-
 const ContactUs = () => {
     return(
         <ErrorBoundary>
             <FirstHeader />
             <SecondHeader />
             <TitleOfPage title="Kontakt OS" />
+            {/* <AgentDetails /> */}
             <ContactForm />
+            
             <Footer />
             <UnderFooter />
         </ErrorBoundary>

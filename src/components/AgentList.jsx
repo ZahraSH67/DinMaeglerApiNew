@@ -30,10 +30,10 @@ const AgentList = () => {
       <div className='agentWrap'>
         {agents.map((agent) => (
           <div key={agent.id} className='agentCard'>
-           <Link to={`/agents/${agent.id}`} state={{ agentId: agent.id }}>{agent.name}
+           <Link to={`/agents/${agent.id}`} state={{ agentId: agent.id }}>
            <img src={agent.image.url} alt="" />
-            <h3>{agent.name}</h3>
-            <p>{agent.title}</p>
+            <h3 className='agentText'>{agent.name}</h3>
+            <p className='agentText'>{agent.title}</p>
                 <div className='socialMedia'>
                     <HiMail src={agent.emil}/>
                     <BiLogoLinkedin />

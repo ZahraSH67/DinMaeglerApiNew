@@ -1,40 +1,65 @@
-import styled from "styled-components";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import MoreButton from './MoreButton';
 
-const StyledSection = styled.section`
-   display: flex; 
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-    
-`
-const StyledDiv = styled.div`
-    background: white;
-    width: 920px;
-    height: 202px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0 25px;
+function SearchBox() {
+  const [searchParams, setSearchParams] = useState({
+    city: '',
+    price: '',
+    type: '',
+  });
 
-`
+  const navigate = useNavigate();
 
-const SearchBox = () =>{
-    return(
-        <StyledSection>
-            <h2 className="searchTitle">Søg efter din drømmebolig</h2>
-            <StyledDiv>
-                <h4 className="search-head">Søg blandt 158 boliger til salg i 74 butikker </h4>
-                <p>Hvad skal din næste bolig indeholde</p>
-                <form action="">
-                    <input type="search" name="" className="input_Box" placeholder="Søg på fx. glaskeramisk komfur, bryggers, kælder eller lignende" />
-                    <input type="button" value="Søg" className="search_Button"/>
-                </form>
-            </StyledDiv>
-           
-        </StyledSection>
-    )
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setSearchParams({
+      ...searchParams,
+      [name]: value,
+    });
+  };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { city, price, type } = searchParams;
+    // Build the search query based on user input
+    // const navigate = useNavigate();
+    const searchQuery = `?city=${city}&price=${price}&type=${type}`;
+    // Navigate to the search results page with the search query as parameters
+    navigate(`/searchresultspage${searchQuery}`);
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text" className='searchBox'
+          // name="city"
+          placeholder="Enter search query (e.g., city=Roskilde&price=&type=)"
+          value={searchParams.city}
+          onChange={handleInputChange}
+        />
+        {/* <input
+          type="number"
+          name="price"
+          placeholder="Price"
+          value={searchParams.price}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="type"
+          placeholder="Type"
+          value={searchParams.type}
+          onChange={handleInputChange}
+        /> */}
+        <MoreButton title="Search" width={120} height={48} />
+      </form>
+    </div>
+  );
 }
 
 export default SearchBox;
+
+
+

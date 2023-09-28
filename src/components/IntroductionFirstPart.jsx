@@ -55,14 +55,14 @@ const StyledBsHouseDoorFill = styled(BsHouseDoorFill)`
 const IntroductionFirstPart = () => {
     return(
         <StyledSection className="introduction_first_part">
-            <h3 className="intro_thirdtitle">Vi har fulgt danskerne hjem i snart 4 årtier</h3>
+            <h3 className="intro_thirdtitle">Vi har fulgt danskerne hjem <br/>i snart 4 årtier</h3>
             <h6 className="intro_sixthtitle">Det synes vi siger noget om os!</h6>
             <p>It is a long established fact that a reader will be distracted by
-                 the readable content of a page when looking at its layout. 
-                 The point of using Lorem Ipsum is that it has normal distribution.
+                 the <br/>readable content of a page when looking at its layout. 
+                 The point of<br/> using Lorem Ipsum is that it has normal distribution.
             </p>
             <p>It is a long established fact that a reader will be distracted 
-                by the readable content of a page when looking at its layout.
+                by the <br/>readable content of a page when looking at its layout.
             </p>
 
             <StyledBigDiv>

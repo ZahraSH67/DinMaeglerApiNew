@@ -31,12 +31,14 @@ const selectBuildings = () => {
   };
 
   return (
-    <div className="selectedBuildings">
-      <h3>Udvalgte Boliger</h3>
-      <p>
+    <div className="selectDiv">
+       <h3>Udvalgte Boliger</h3>
+      <p className="selctParagh">
         There are many variations of passages of Lorem Ipsum available but the
-        this in majority have suffered alteration in some
+        this in <br/>majority have suffered alteration in some
       </p>
+      <div className="selectedBuildings">
+     
       {homes.map((home) => (
         <div key={home.id} className="buildingCard">
           <img src={home.images[0].url} alt="" />
@@ -65,8 +67,10 @@ const selectBuildings = () => {
           </div>
         </div>
       ))}
-      <MoreButton title="Se alle boliger" />
     </div>
+    <MoreButton title="Se alle boliger" />
+    </div>
+    
   );
 };
 

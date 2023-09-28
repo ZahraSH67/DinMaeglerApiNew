@@ -14,7 +14,7 @@ const StyledNavigation = styled.div`
 const Navigation = () => {
     return (
         <StyledNavigation>
-            <Link to="/buildingforsale">
+            <Link to="/buildingsforsale">
                 <NavigationElement title="Boliger til salg" />
             </Link>
             <Link to="/agentview">

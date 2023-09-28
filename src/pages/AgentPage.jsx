@@ -42,6 +42,7 @@
 
 import FirstHeader from "../templates/FirstHeader";
 import SecondHeader from "../templates/SecondHeader";
+import TitleOfPage from "../components/TitleOfPage";
 import AgentDetails from "../components/AgentDetails";
 import AgentContactForm from "../components/AgentContactForm";
 import ErrorBoundary from "../components/ErrorBoundary";
@@ -53,6 +54,7 @@ const AgentPage = () => {
       <ErrorBoundary>
           <FirstHeader />
           <SecondHeader />
+          <TitleOfPage title="Kontakt en medarbejder" />
           <AgentDetails />
           <AgentContactForm />
           <Footer />

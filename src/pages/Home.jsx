@@ -9,6 +9,8 @@ import Agent from "../templates/Agent";
 import AppStore from "../components/AppStore";
 import Footer from "../templates/Footer";
 import UnderFooter from "../components/UnderFooter";
+import BuildingList from "../templates/BuildingList";
+// import SearchingFunction from "../templates/SearchingFunction";
 const Home = () => {
   return (
     <>
@@ -17,7 +19,8 @@ const Home = () => {
         <SecondHeader />
         <Hero />
         <Introduction />
-        <SelectBuildings />
+       {/* <BuildingList/> */}
+       <SelectBuildings />
         <RegisterEmail />
         <Agent />
         <AppStore />

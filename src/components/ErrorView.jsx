@@ -1,6 +1,9 @@
 import Lottie from "lottie-react";
 import errorLottie from "../assets/lottiefiles/error.json";
 import styled from "styled-components";
+import FirstHeader from "../templates/FirstHeader";
+import SecondHeader from "../templates/SecondHeader";
+
 // import Paragraf from "../components/Paragraf";
 import { Link } from "react-router-dom";
 // import Heading from "../components/Heading";
@@ -14,7 +17,7 @@ const StyledLottie = styled(Lottie)`
 const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center<
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -25,6 +28,8 @@ const StyledSection = styled.section`
 const ErrorView = () => {
   return (
     <StyledSection>
+      <FirstHeader />
+      <SecondHeader />
      
       {/* <Paragraf
         text="Take the dog for a walk, or..."

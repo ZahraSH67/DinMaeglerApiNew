@@ -1,106 +1,23 @@
-// AgentDetails.jsx
-// import React from 'react';
-
-// const AgentDetails = ({ agent }) => {
-//   return (
-//     <div className="agent-details">
-//       <h2>{agent.name}</h2>
-//       <p>Email: {agent.email}</p>
-//       {/* Additional agent details here */}
-//     </div>
-//   );
-// };
-
-// export default AgentDetails;
-
-
-
-
-
-
-
-// import { useParams } from 'react-router-dom';
-// // import React, { useEffect } from 'react';
-// // import React, { useState } from 'react';
-// import React, { useState, useEffect } from 'react';
-
-
-// function AgentDetails() {
-//   const { agentId } = useParams();
-//   const [agentData, setAgentData] = useState(null);
-
-//   // Now you can use agentId to fetch agent data
-//   // For example, fetch agent data based on agentId
-//   // Replace the following code with your actual API request logic
-
-//   const fetchAgentData = async () => {
-//     try {
-//       const response = await fetch(`https://dinmaegler.onrender.com/agents/${agentId}`);
-//       if (!response.ok) {
-//         throw new Error('Agent not found');
-//       }
-//       const agentData = await response.json();
-//       // Now you have the agent data, you can use it as needed
-//       console.log('Agent Data:', agentData);
-//     } catch (error) {
-//       console.error('Error fetching agent data:', error);
-//     }
-//   };
-
-//   useEffect(() => {
-//     // Fetch agent data when the component mounts
-//     fetchAgentData();
-//   }, [agentId]);
-
- 
-
-//   return (
-//     <div className="agent-details-container">
-//       <div className="agent-image-container">
-//         <img src={agentData.image} alt={`Agent ${agentData.name}`} />
-//         <div className="contact-box">
-//           <a href={`https://www.instagram.com/${agentData.instagram}`}>Instagram</a>
-//           <a href={`https://www.linkedin.com/in/${agentData.linkedin}`}>LinkedIn</a>
-//           <a href={`skype:${agentData.skype}?call`}>Skype</a>
-//         </div>
-//       </div>
-//       <div className="agent-info-container">
-//         <h2>{agentData.name}</h2>
-//         <p>{agentData.jobDescription}</p>
-//         <p>Phone: {agentData.phone}</p>
-//         <p>Email: {agentData.email}</p>
-//         <div className="additional-info">
-//           <h3>More Information</h3>
-//           <p>{agentData.additionalInfo}</p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-
-
-
-
-
-//   // return (
-//   //   <div>
-//   //     {/* AgentPage content */}
-//   //     {/* <h2>Agent Details for Agent ID: {agentId}</h2> */}
-//   //     {/* <img src="" alt="" /> */}
-//   //     {/* Render agent details here */}
-//   //   </div>
-//   // );
-// }
-
-// export default AgentDetails;
-
-
-
-
-
-
 
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import {FaInstagram} from "react-icons/fa";
+import {FaLinkedinIn} from "react-icons/fa";
+import {SlSocialSkype} from "react-icons/sl";
+import {BsFillTelephoneFill} from "react-icons/bs";
+import {SiMinutemailer} from "react-icons/si"
+import styled from 'styled-components';
+const StyledFaInstagram = styled(FaInstagram)`
+  color: white;
+`
+const StyledFaLinkedinIn = styled(FaLinkedinIn)`
+  color: white;
+`
+const StyledSlSocialSkype = styled(SlSocialSkype)`
+color: white;
+`
+const StyledBsFillTelephoneFill = styled(BsFillTelephoneFill)``
+const StyledSiMinutemailer = styled(SiMinutemailer)``
 
 function AgentDetails() {
   const { agentId } = useParams();
@@ -130,27 +47,44 @@ function AgentDetails() {
 
   // Agent data has loaded, render the agent details
   return (
-    <div className="agent-details-container">
+    <div>
+        <div className="agent-details-container">
       <div className="agent-image-container">
         <img src={agentData.image.url} alt={`Agent ${agentData.name}`} />
         <div className="contact-box">
-          <a href={`https://www.instagram.com/${agentData.instagram}`}>Instagram</a>
-          <a href={`https://www.linkedin.com/in/${agentData.linkedin}`}>LinkedIn</a>
-          <a href={`skype:${agentData.skype}?call`}>Skype</a>
+          <a href={`https://www.instagram.com/${agentData.instagram}`}><StyledFaInstagram /></a>
+          <a href={`https://www.linkedin.com/in/${agentData.linkedin}`}><StyledFaLinkedinIn /></a>
+          <a href={`skype:${agentData.skype}?call`}><StyledSlSocialSkype /></a>
         </div>
       </div>
       <div className="agent-info-container">
         <h2>{agentData.name}</h2>
-        <p>{agentData.jobDescription}</p>
-        <p>Phone: {agentData.phone}</p>
-        <p>Email: {agentData.email}</p>
-        <div className="additional-info">
-          <h3>om {agentData.name}</h3>
-          <p>{agentData.description}</p>
-        </div>
+        <p>{agentData.title}</p>
+        <p><StyledBsFillTelephoneFill /> {agentData.phone}</p>
+        <p><StyledSiMinutemailer/> {agentData.email}</p>
       </div>
     </div>
+    <div className="additional-info">
+      <h3>om {agentData.name}</h3>
+      <p>{agentData.description}</p>
+    </div>
+  
+
+
+</div>
+    
   );
 }
 
 export default AgentDetails;
+
+
+
+
+
+
+
+
+
+
+

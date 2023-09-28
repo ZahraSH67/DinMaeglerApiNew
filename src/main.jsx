@@ -22,43 +22,35 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/Home.jsx";
-// import ListView from "./pages/ListView.jsx";
 import ErrorView from "./pages/ErrorView.jsx";
-// import DetailView from "./pages/DetailView.jsx";
-import BuildingForSale from "./pages/BuildingsForSale.jsx";
+import BuildingsForSale from "./pages/BuildingsForSale.jsx";
 import AgentView from "./pages/AgentView.jsx";
 import ContactUs from "./pages/ContactUs.jsx";
 import AgentPage from "./pages/AgentPage.jsx";
-// import BuildingDetailsView, { BuildingDetailsViewLoader } from "./pages/BuildingDetailsView.jsx";
+import BuildingDetailsView from "./pages/BuildingDetailsView.jsx";
+import LogInView from "./pages/LogInView.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import SearchResultsPage from "./pages/SearchResultsPage.jsx";
+import RegistrationPage from "./pages/RegistrationPage.jsx";
 
 
 
-// import Lottie from "lottie-react";
 
-// const router = createBrowserRouter(
-//   createRoutesFromElements(
-//     <Route path="/" element={<App />} errorElement={<ErrorView />}>
-//       <Route index element={<Home />} />
-//       <Route path="/buildingforsale/" element={<BuildingForSale />} >
-//       {/* <Route index element={<Houses />} loader={housesLoader} /> */}
-//         <Route path="/buildingdetailsview/:id" element={<BuildingDetailsView />} />
-//       </Route>
-//     </Route>
-//   )
-// );
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorView />}>
       <Route index element={<Home />} />
-      <Route path="/buildingforsale/" element={<BuildingForSale />} />
+      <Route path="/buildingsforsale/" element={<BuildingsForSale />} />
       <Route path="/agentview/" element={<AgentView />} />
       <Route path="/agents/:agentId" element={<AgentPage />} />
       <Route path="/contactus/" element={<ContactUs />} />
-      
-      {/* <Route path="/buildingdetailsview:id" element={< BuildingDetailsView/>} loader={BuildingDetailsViewLoader} /> */}
-  
+      <Route path="/buildingdetailsview/:buildingId" element={<BuildingDetailsView />} />
+      <Route path="/loginview" element={<LogInView />} />
+      <Route path="/notfound" element={<NotFound />} />
+      <Route path="/searchresultspage" element={<SearchResultsPage />} />
+      <Route path="/registrationpage" element={<RegistrationPage />} />
     </Route>
-    
   )
   
 );

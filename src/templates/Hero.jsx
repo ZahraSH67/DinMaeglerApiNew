@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import SearchBox from "../components/SearchBox";
+// import SearchBox from "../components/SearchBox";
 import Img from "../assets/hero.jpg"
+// import SearchBox from "../components/SearchBox";
+import HeroBox from "./HeroBox";
 
 
 const StyledHero = styled.section`
@@ -19,7 +21,7 @@ const StyledHero = styled.section`
 const Hero = () =>{
     return(
         <StyledHero>
-            <SearchBox />
+            <HeroBox />
         </StyledHero>
     )
 }
